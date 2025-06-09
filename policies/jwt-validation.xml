@@ -1,0 +1,22 @@
+<policies>
+  <inbound>
+    <base />
+    <validate-jwt header-name="Authorization" require-scheme="Bearer">
+      <openid-config url="https://login.microsoftonline.com/{tenantId}/v2.0/.well-known/openid-configuration" />
+      <required-claims>
+        <claim name="aud">
+          <value>{apiAudience}</value>
+        </claim>
+        <claim name="iss">
+          <value>https://sts.windows.net/{tenantId}/</value>
+        </claim>
+      </required-claims>
+    </validate-jwt>
+  </inbound>
+  <backend>
+    <base />
+  </backend>
+  <outbound>
+    <base />
+  </outbound>
+</policies>

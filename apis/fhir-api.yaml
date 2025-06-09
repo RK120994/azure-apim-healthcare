@@ -1,0 +1,24 @@
+openapi: 3.0.1
+info:
+  title: Healthcare FHIR API
+  version: 1.0.0
+paths:
+  /Patient:
+    get:
+      summary: Get Patients
+      operationId: getPatients
+      responses:
+        '200':
+          description: List of patients
+          content:
+            application/fhir+json:
+              schema:
+                type: object
+                properties:
+                  resourceType:
+                    type: string
+                    example: Bundle
+                  entry:
+                    type: array
+                    items:
+                      type: object
