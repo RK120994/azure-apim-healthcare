@@ -1,0 +1,7 @@
+resource_group_name = "rg-healthcare-apim"
+location            = "eastus"
+apim_name           = "healthcare-apim"
+publisher_name      = "Life Healthcare"
+publisher_email     = "admin@lifehealthcare.co.za"
+tenant_id           = "xxxx-xxxx-xxxx-xxxx"
+api_audience        = "https://api.lifehealthcare.co.za"
